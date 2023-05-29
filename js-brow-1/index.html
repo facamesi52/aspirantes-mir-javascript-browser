@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Mayúsculas</title>
+  </head>
+  <body>
+    <form autocomplete="off" id="form">
+    <label for="texto">Escribe algo:</label>
+    <input type="text" id="texto">
+    <button id="boton" class="btn" type="submit" onclick="agregaMayus()">Convertir mensaje a mayusculas </button>
+    <!-- aca va el resultado tal cual se escribe -->
+    <p id="resultado"></p>
+    <!-- aca va el resultado en mayusculas -->
+    <p id="resultadoMayusculas"></p>
+</form>
+    <script>
+    let boton = document.querySelector("#boton");
+    let input = document.querySelector("#texto");
+    let resultado = document.querySelector('#resultado');
+    let resultadoMayusculas = document.querySelector('#resultadoMayusculas')   
+    input.addEventListener('input', function() {
+    const texto = input.value.toUpperCase();
+    resultado.textContent = texto;
+});
+    boton.addEventListener('click', function(evento){
+    evento.preventDefault()
+    const texto = input.value.toUpperCase();
+    resultadoMayusculas.textContent = texto;
+});
+
+    </script>
+  </body>
+</html>

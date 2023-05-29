@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Palindromo</title>
+  </head>
+  <body>
+    <label for="texto">Escribe algo:</label>
+    <input type="text" id="texto">
+    <button class="btn" id="boton" onclick="palindrome()">Validar</button>
+    <p id="resultado"></p>
+    <script>
+    let boton = document.querySelector("#boton");
+    let input = document.querySelector("#texto");
+    let resultado = document.querySelector('#resultado');
+
+    boton.addEventListener('click', function palindrome(evento) {
+    evento.preventDefault()
+    const palabra = input.value;
+    let minuscula = palabra.toLowerCase()
+    let invertida = ((minuscula.split("")).reverse()).join("")
+    let respuesta = false + `, ${palabra} No es palabra palindrome`
+    if (minuscula == invertida) {
+  respuesta = true + `, ${palabra} Es una palabra palindrome`
+    }
+    resultado.innerHTML = respuesta
+    });
+    </script>
+  </body>
+</html>
