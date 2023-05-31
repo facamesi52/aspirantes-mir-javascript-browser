@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Lista de tareas</title>
+  <link rel="stylesheet" href="main.css">
+</head>
+<body>
+  <section>
+    <form id="formulario">
+      <div id="fecha"></div>
+        <div id="contador">
+            <p>Total tareas: <span id="totalTareas">0</span> </p>
+            <p>Realizadas: <span id="tareasRealizadas">0</span></p>
+        </div>
+        <h1>Agregue sus tareas:</h1><br>
+        <input type="text" placeholder="Añadir una tarea" id="input" autocomplete="off">
+        <button type="submit" id="boton">+</button>
+    </form>
+    <ul id="listaTareas">
+    </ul>
+    <button id="btnBorrarTachadas">Eliminar Tareas Tachadas</button>
+    <button id="borrarTodo">Borrar todo</button>
+  </section>
+  
+  <script src="index.js"></script>
+</body>
+</html>
